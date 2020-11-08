@@ -16,7 +16,5 @@ class paper{
         var ppos = this.body.position
         imageMode(CENTER)
         image(this.image,0,0,this.r,this)
-        ellipseMode(RADIUS)
-        ellipse(ppos.x,ppos.y,this.r,this.r)
     }
 }
