@@ -7,7 +7,7 @@ class paper{
             density:1.2
         }
         this.r=r
-        this.body = Bodies.circle(x,y,this.r,options)
+        this.body=Bodies.circle(x,y,this.r/3,options);
         this.image = loadImage("paper.png")
         World.add(world,this.body)
 
@@ -15,6 +15,6 @@ class paper{
     display(){
         var ppos = this.body.position
         imageMode(CENTER)
-        image(this.image,0,0,this.r,this)
+        image(this.image,ppos.x,ppos.y,this.r,this.r)
     }
 }
