@@ -1,4 +1,4 @@
-class dustbin{
+class Dustbin{
     constructor(x,y,width,height){
         var options={
             isStatic:true
@@ -6,12 +6,13 @@ class dustbin{
         this.width=width,
         this.height=height,
         this.body=Bodies.rectangle(x,y,width,height,options)
+        this.image=loadImage("dustbin.png")
         World.add(world,this.body)
     }
     display(){
-        var pos =this.body.position
-        rectMode(CENTER)
+        var dpos =this.body.position
+        imageMode(CENTER)
         fill(255);
-        rect(pos.x,pos.y,this.width,this.height)
+        image(this.image,dpos.x,dpos.y-100,this.width,this.height);
     }
 }
